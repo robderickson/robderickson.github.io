@@ -63,7 +63,7 @@ For every attribute you add to this class, append a period and your attribute's 
 
 That's it! Now you have a base OID you can build on when customizing Active Directory. This scheme should not interfere with AD, and no other schema extensions or AD updates should interfere with it.
 
-#### Reference articles
+## Related Links
 I developed this solution after reading the following article and examining the related VBScript. I'm sorry if they no longer exist:
 
 * [Microsoft document on obtaining an OID](https://docs.microsoft.com/en-us/windows/desktop/AD/obtaining-an-object-identifier-from-microsoft)
