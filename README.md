@@ -1,5 +1,5 @@
-# I'm Probably Doing This Wrong
+<h1>I'm Probably Doing This Wrong</h1>
 {% for post in site.posts %}
-## [{{ post.title }}]({{ post.url }})  
-{{ post.excerpt }}  
+<h3>[{{ post.title }}]({{ post.url }})</h3>  
+<p>{{ post.excerpt }}</p>  
 {% endfor %}
