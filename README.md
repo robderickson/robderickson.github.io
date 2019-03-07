@@ -1,6 +1,6 @@
 # I'm Probably Doing This Wrong
 {% for post in site.posts %}
-[{{ post.title }}](###{{ post.url }})  
-{{ post.published_at | date: "%Y-%m-%d" }}
+[{{ post.title }}](## {{ post.url }})  
+{{ post.date }}
 {{ post.excerpt }}  
 {% endfor %}
