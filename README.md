@@ -1,4 +1,5 @@
+# I'm Probably Doing This Wrong
 {% for post in site.posts %}
-  <h2>[{{ post.title }}]({{ post.url }})</h2>  
-  {{ post.excerpt }}
+## [{{ post.title }}]({{ post.url }})  
+{{ post.excerpt }}  
 {% endfor %}
