@@ -10,15 +10,24 @@ This article is for individuals who need an OID to create custom Active Director
 There are a lot of scary warnings on the internet to get your OID right before customizing the Active Directory schema. I will start by showing you how to create a base OID you can use for all of your schema extensions. Then I will suggest a (possibly incorrect) way to extend your base OID for your custom schema objects.
 
 ## Create your base OID
-Run this bit of PowerShell code to create a base OID beginning with the prefix from the reference VBScript.
+Run this bit of PowerShell code to create a base OID beginning with the prefix `1.2.840.113556.1.8000.2554` suggested by Microsoft.
 
 ```powershell
+# Prefix suggested by Microsoft
 $Prefix = '1.2.840.113556.1.8000.2554'
+
+# Create a new GUID and remove the dashes
 $Guid = (New-Guid).guid.Replace('-','')
+
+# Define substring arguments for picking apart your GUID
 $SubstringArgs = (0,4),(4,4),(8,4),(12,4),(16,4),(20,6),(26,6)
+
+# Create a collection of your GUID parts, and convert them from Hexadecimal to Decimal
 $OidSuffixParts = foreach ($ArgPair in $SubstringArgs) {
     [Convert]::ToInt64($Guid.Substring($ArgPair[0],$ArgPair[1]),16)
 }
+
+# Join all the GUID parts with a period between them, and then join the Prefix and Suffix
 $Suffix = $OidSuffixParts -join '.'
 $Prefix, $Suffix) -join '.'
 ```
