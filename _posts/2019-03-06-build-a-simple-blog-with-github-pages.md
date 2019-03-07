@@ -54,18 +54,10 @@ If you were to push your local repo back to GitHub at this point, you would stil
 
 1. Open your `README.md` file, and replace its contents with the following markup:  
     ```html
-    ---
-    layout: page
-    title: My Fancy Blog
-    ---
-    <ul>
     {% for post in site.posts %}
-        <li>
-        <a href="{{ post.url }}">{{ post.title }}</a>
-        {{ post.excerpt }}
-        </li>
+        [{{ post.title }}]({{ post.url }})  
+        {{ post.excerpt }}  
     {% endfor %}
-    </ul>
     ```
 2. If you created an `author` branch like I did, merge it into your local `master`, and push your `master` branch back to GitHub:  
     ```
