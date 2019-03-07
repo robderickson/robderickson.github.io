@@ -1,4 +1,8 @@
-# Create a New OID for Active Directory Schema Extensions
+---
+layout: post
+title: "Create a New OID for Active Directory Schema Extensions"
+---
+
 This article is for individuals who need an OID to create custom Active Directory schema classes or attributes, and do not already have a Private Enterprise Number (PEN) from http://pen.iana.org. This is specific to Active Directory. If you are using some other LDAP directory, refer to its documentation or register for a PEN.
 
 There are a lot of scary warnings on the internet to get your OID right before customizing the Active Directory schema. I will start by showing you how to create a base OID you can use for all of your schema extensions. Then I will suggest a (possibly incorrect) way to extend your base OID for your custom schema objects.
