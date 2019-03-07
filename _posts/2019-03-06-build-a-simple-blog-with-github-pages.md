@@ -18,14 +18,13 @@ This is the process I used to create a minimal blog using only what is natively 
 9. Now pull all of your hard work to your local repository: `git pull origin master`
 
 ## Publish content to your new blog
-In my local repository, I have an `author` branch where I plan to commit content I am not ready to publish:  
+In my local repository, I have an `author` branch where I plan to commit content I am not ready to publish:
+```
+git branch author
+git checkout author
+```  
 
-    ```
-    git branch author
-    git checkout author
-    ```
-#### Posts
-To publish blog posts, you will need to create a folder name `_posts`, where you will save specially-formatted Markdown files.
+To publish blog posts, you will need to create a folder named `_posts`, where you will save specially-formatted Markdown files.
 
 1. Create a directory named `_posts` in your local repository.
 2. Create a new Markdown file named using the following format: _`YYYY`_`-`_`MM`_`-`_`DD`_`-`_`title`_`.md`  
@@ -40,3 +39,23 @@ To publish blog posts, you will need to create a folder name `_posts`, where you
     # My first post!
     Welcome to my blog. This is my first post!
     ```
+4. Save your Markdown file, "add" your `_posts` directory to your repo, and then stage and commit your work:  
+    ```
+    git add _posts
+    git commit -a -m "My first post!"`
+    ```
+5. If you created an `author` branch like I did, merge it into your local `master`, and push your `master` branch back to GitHub:  
+    ```
+    git checkout master
+    git merge author
+    git push origin master
+    ```
+
+Your first post should now be visible on your new blog. You can also create additional pages to your blog, and do some more magic with front matter.
+
+## Related links
+* Create a GitHub Pages site: https://pages.github.com/
+* Add a Jekyll theme: https://help.github.com/en/articles/adding-a-jekyll-theme-to-your-github-pages-site-with-the-jekyll-theme-chooser
+* Create posts: https://jekyllrb.com/docs/posts/
+* Create pages: https://jekyllrb.com/docs/pages/
+* Read more about front matter: https://jekyllrb.com/docs/front-matter/
