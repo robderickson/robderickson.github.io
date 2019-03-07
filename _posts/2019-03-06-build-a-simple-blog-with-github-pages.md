@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Build a Simple Blog with Github Pages"
+by: "Rob Derickson"
+tags: githubpages,github,blog,jekyll
 ---
 
 I struggled a little setting this blog up, so I figured I would blog about it. I didn't want anyting too fancy, and I didn't want to touch anything Ruby-related to support Jekyll themes.
