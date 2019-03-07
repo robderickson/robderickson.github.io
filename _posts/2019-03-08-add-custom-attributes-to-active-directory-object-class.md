@@ -28,10 +28,10 @@ Install-Module 'ADSchema' -Scope 'CurrentUser'
 ## Create your custom attribute and auxiliary class
 In my example, I will create a new attribute for groups named `robAwsAccountId`. In the code sample below, replace every instance of _your-&lt;type&gt;-oid-here_ with your own OIDs. I created the following OIDs for my use:  
 
-| Type | OID |
-|------|-----|
-| Class | 1.2.840.113556.1.8000.2554.29303.55750.9464.19531.42101.14752338.11883148.2 |
-| Attribute | 1.2.840.113556.1.8000.2554.29303.55750.9464.19531.42101.14752338.11883148.2.1 |
+ Type | OID
+------|-----
+ Class | 1.2.840.113556.1.8000.2554.29303.55750.9464.19531.42101.14752338.11883148.2
+ Attribute | 1.2.840.113556.1.8000.2554.29303.55750.9464.19531.42101.14752338.11883148.2.1
 
 ```powershell
 # Create your custom attribute
