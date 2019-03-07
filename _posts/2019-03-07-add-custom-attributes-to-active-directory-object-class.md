@@ -7,7 +7,7 @@ tags: activedirectory,ad,schema,powershell,aws
 
 Extending your Active Directory schema can be scarey, but it may not be as scarey as you think. I will show you how to use the ["ADSchema"](https://www.powershellgallery.com/packages/ADSchema/) module in the ["PowerShell Gallery"](https://www.powershellgallery.com/) to add custom attributes to existing object classes.
 
-If you do not know what an OID is, read ["Create A New OID for Active Directory Schema Extensions"]({{ site.baseurl }}{% post_url /_posts/2019-03-07-create-a-new-oid-for-active-directory-schema-extensions}) first. That article will walk you through creating an OID that you probably should not be using in production. Anyway, have a firm OID strategy before proceeding.
+If you do not know what an OID is, read ["Create A New OID for Active Directory Schema Extensions"]({{ site.baseurl }}{% post_url /_posts/2019-03-07-create-a-new-oid-for-active-directory-schema-extensions %}) first. That article will walk you through creating an OID that you probably should not be using in production. Anyway, have a firm OID strategy before proceeding.
 
 The basic steps to adding custom attributes to object classes goes like this:
 1. Create a new schema attribute.
