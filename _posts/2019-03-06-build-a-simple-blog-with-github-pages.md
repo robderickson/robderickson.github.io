@@ -69,8 +69,8 @@ If you were to push your local repo back to GitHub at this point, you would stil
 Your first post should now be visible on your new blog. You can also create additional pages to your blog, and do some more magic with front matter.
 
 ## Related links
-* Create a GitHub Pages site: https://pages.github.com/
-* Add a Jekyll theme: https://help.github.com/en/articles/adding-a-jekyll-theme-to-your-github-pages-site-with-the-jekyll-theme-chooser
-* Create posts: https://jekyllrb.com/docs/posts/
-* Create pages: https://jekyllrb.com/docs/pages/
-* Read more about front matter: https://jekyllrb.com/docs/front-matter/
+* [Create a GitHub Pages site](https://pages.github.com/)
+* [Add a Jekyll theme to Github Pages](https://help.github.com/en/articles/adding-a-jekyll-theme-to-your-github-pages-site-with-the-jekyll-theme-chooser)
+* [Create posts](https://jekyllrb.com/docs/posts/)
+* [Create pages](https://jekyllrb.com/docs/pages/)
+* [Read more about front matter](https://jekyllrb.com/docs/front-matter/)

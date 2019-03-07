@@ -55,5 +55,5 @@ That's it! Now you have a base OID you can build on when customizing Active Dire
 #### Reference articles
 I developed this solution after reading the following article and examining the related VBScript. I'm sorry if they no longer exist:
 
-* Microsoft document on obtaining an OID: https://docs.microsoft.com/en-us/windows/desktop/AD/obtaining-an-object-identifier-from-microsoft
-* VBScript to create a base OID: https://gallery.technet.microsoft.com/scriptcenter/56b78004-40d0-41cf-b95e-6e795b2e8a06
+* [Microsoft document on obtaining an OID](https://docs.microsoft.com/en-us/windows/desktop/AD/obtaining-an-object-identifier-from-microsoft)
+* [VBScript to create a base OID](https://gallery.technet.microsoft.com/scriptcenter/56b78004-40d0-41cf-b95e-6e795b2e8a06)
