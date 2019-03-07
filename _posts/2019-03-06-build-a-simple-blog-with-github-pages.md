@@ -17,7 +17,7 @@ This is the process I used to create a minimal blog using only what is natively 
 8. Browse to `https://`_`username`_`.github.io` to see your new blog!
 9. Now pull all of your hard work to your local repository: `git pull origin master`
 
-## Publish content to your new blog
+## Create content your new blog
 In my local repository, I have an `author` branch where I plan to commit content I am not ready to publish:
 ```
 git branch author
@@ -44,7 +44,22 @@ To publish blog posts, you will need to create a folder named `_posts`, where yo
     git add _posts
     git commit -a -m "My first post!"`
     ```
-5. If you created an `author` branch like I did, merge it into your local `master`, and push your `master` branch back to GitHub:  
+
+## Publish your content
+If you were to push your local repo back to GitHub at this point, you would still only see whatever is in `README.md`. It is pobably the template sample page if you committed it after selecting a template. You will need to modify your `README.md` to show off your new content.
+
+1. Open your `README.md` file, and replace its contents with the following markup:  
+    ```html
+    <ul>
+    {% for post in site.posts %}
+        <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        {{ post.excerpt }}
+        </li>
+    {% endfor %}
+    </ul>
+    ```
+2. If you created an `author` branch like I did, merge it into your local `master`, and push your `master` branch back to GitHub:  
     ```
     git checkout master
     git merge author
