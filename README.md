@@ -1,3 +1,8 @@
+---
+layout: page
+title: My Fancy Blog
+---
+
 <ul>
   {% for post in site.posts %}
     <li>
