@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Create a New OID for Active Directory Schema Extensions"
-author: rob_derickson
+author: "Rob Derickson"
 tags: activedirectory,ad,schema,oid,powershell
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Build a Simple Blog with Github Pages"
-author: rob_derickson
+author: "Rob Derickson"
 tags: githubpages,github,blog,jekyll
 ---
 
