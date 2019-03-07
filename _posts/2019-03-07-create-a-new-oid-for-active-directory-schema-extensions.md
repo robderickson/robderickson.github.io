@@ -18,10 +18,10 @@ $OidSuffixParts = foreach ($ArgPair in $SubstringArgs) {
     [Convert]::ToInt64($Guid.Substring($ArgPair[0],$ArgPair[1]),16)
 }
 $Suffix = $OidSuffixParts -join '.'
-($Prefix + $Suffix) -join '.'
+$Prefix, $Suffix) -join '.'
 ```
 
-I ended up with this OID: `1.2.840.113556.1.8000.255429303.55750.9464.19531.42101.14752338.11883148`
+I ended up with this OID: `1.2.840.113556.1.8000.2554.29303.55750.9464.19531.42101.14752338.11883148`
 
 ## Create and follow an OID usage policy
 I don't know if this is the right way to use OIDs in AD, but this is the way I do it.
@@ -45,9 +45,9 @@ Create and maintain a similar table for each of your custom schema attributes. E
 
 ### Append these numbers to your base OID when creating a new schema attribute
 
-Every time you create a schema attribute, append a period and the class's number to the end of your base OID as a new base for the class. Using the OID I created above, my Group class's base OID would be `1.2.840.113556.1.8000.255429303.55750.9464.19531.42101.14752338.11883148.3`.
+Every time you create a schema attribute, append a period and the class's number to the end of your base OID as a new base for the class. Using the OID I created above, my Group class's base OID would be `1.2.840.113556.1.8000.2554.29303.55750.9464.19531.42101.14752338.11883148.3`.
 
-Then append a period and your attribute's OID number to the end of that to get your attribute's OID. My Rob-Favorite-Color OID would be `1.2.840.113556.1.8000.255429303.55750.9464.19531.42101.14752338.11883148.3.2`.
+Then append a period and your attribute's OID number to the end of that to get your attribute's OID. My Rob-Favorite-Color OID would be `1.2.840.113556.1.8000.2554.29303.55750.9464.19531.42101.14752338.11883148.3.2`.
 
 That's it! Now you have a base OID you can build on when customizing Active Directory. This scheme should not interfere with AD, and no other schema extensions should interfere with it.
 
