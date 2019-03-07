@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Build a Simple Blog with Github Pages"
-by: "Rob Derickson"
+author: rob_derickson
 tags: githubpages,github,blog,jekyll
 ---
 
@@ -15,9 +15,9 @@ This is the process I used to create a minimal blog using only what is natively 
     **Note:** This _must_ match your GitHub username.
 3. Clone your new repository: `git clone https://github.com/`_`username`_`/`_`username`_`.github.io`
 4. Back on the GitHub site, click **Settings**.  
-![Repository Settings button screenshot](/assets/github-settings.png)  
+![Repository Settings button screenshot](assets/github-settings.png)  
 5. Scroll down to the _GitHub Pages_ section and click **Choose Theme**.  
-![Choose Theme button screenshot](/assets/github-choostheme.png)  
+![Choose Theme button screenshot](assets/github-choostheme.png)  
 6. Select a theme (I liked Minimal) and click **Select Theme**.
 7. Click **Commit changes** to commit the GitHub Pages sample to your `master` branch.
 8. Browse to `https://`_`username`_`.github.io` to see your new blog!
@@ -48,7 +48,7 @@ To publish blog posts, you will need to create a folder named `_posts`, where yo
 4. Save your Markdown file, "add" your `_posts` directory to your repo, and then stage and commit your work:  
     ```
     git add _posts
-    git commit -a -m "My first post!"`
+    git commit -a -m "My first post!"
     ```
 
 ## Publish your content
