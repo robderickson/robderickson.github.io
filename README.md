@@ -1,4 +1,4 @@
 {% for post in site.posts %}
-##  [{{ post.title }}]({{ post.url }})  
-    {{ post.excerpt }}
+  <h2>[{{ post.title }}]({{ post.url }})</h2>  
+  {{ post.excerpt }}
 {% endfor %}
