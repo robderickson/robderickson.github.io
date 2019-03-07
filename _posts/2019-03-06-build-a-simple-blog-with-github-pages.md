@@ -57,7 +57,7 @@ If you were to push your local repo back to GitHub at this point, you would stil
 1. Open your `README.md` file, and replace its contents with the following markup:  
     ```markdown
     
-    {{ "{% for post in site.posts " }}%}
+    { "{% for post in site.posts " }}%}
     **[{{ "{{ post.title " }}}}]({{ "{{ post.url " }}}})**  
     {{ '{{ post.date | date: "%Y-%m-%d" ' }}}}  
     {{ "{{ post.excerpt " }}}}  
