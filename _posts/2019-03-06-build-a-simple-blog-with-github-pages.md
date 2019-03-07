@@ -1,4 +1,8 @@
-# Build a Simple Blog with Github Pages
+---
+layout: post
+title: "Build a Simple Blog with Github Pages"
+---
+
 I struggled a little setting this blog up, so I figured I would blog about it. I didn't want anyting too fancy, and I didn't want to touch anything Ruby-related to support Jekyll themes.
 
 This is the process I used to create a minimal blog using only what is natively available from GitHub. All of the documentation I followed can be found under "Related Links" at the bottom of the post.
