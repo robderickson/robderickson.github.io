@@ -29,7 +29,7 @@ $OidSuffixParts = foreach ($ArgPair in $SubstringArgs) {
 
 # Join all the GUID parts with a period between them, and then join the Prefix and Suffix
 $Suffix = $OidSuffixParts -join '.'
-$Prefix, $Suffix) -join '.'
+$Prefix, $Suffix -join '.'
 ```
 
 I ended up with this OID: `1.2.840.113556.1.8000.2554.29303.55750.9464.19531.42101.14752338.11883148`
