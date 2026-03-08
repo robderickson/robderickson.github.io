@@ -1,0 +1,17 @@
+baseURL = 'https://robderickson.com/'
+languageCode = 'en-us'
+title = 'This is a... Blog?'
+theme = 'beautifulhugo'
+
+[params]
+    hometitle = 'This is a... Blog?'
+    subtitle = 'by Rob Derickson'
+    rss = true
+    [params.author]
+        name = 'Rob Derickson'
+        linkedin = 'robderickson'
+        github = 'robderickson'
+
+[caches]
+    [caches.images]
+        dir = ':cacheDir/images'
