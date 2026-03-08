@@ -90,3 +90,23 @@ theme = 'beautifulhugo'
 See [Host on GitHub Pages](http://gohugo.io/host-and-deploy/host-on-github-pages/) for step-by-step instructions on how to setup a GitHub Actions workflow to deploy your site.
 
 In your `hugo.yaml` workflow document, customize the `jobs/build/env/TZ:` key to match your time zone. I set mine to `America/New_York` for the US Eastern time zone. For a list of valid IANA time zones, see Wikipedia's [List of tz database time zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
+
+## (Optional) Configure a custom domain
+
+1. Open your repository on github.com.
+1. Click **Settings** and then click **Pages**.
+1. Under **Custom domain** type your domain name and click **Save**.
+1. In your DNS zone host (usually your domain registrar), create DNS A and AAAA records like the following:
+
+    | Type | Name | Content |
+    |------|------|---------|
+    | A | @ | 185.199.108.153 |
+    | A | @ | 185.199.109.153 |
+    | A | @ | 185.199.110.153 |
+    | A | @ | 185.199.111.153 |
+    | AAAA | @ | 2606:50c0:8000::153 |
+    | AAAA | @ | 2606:50c0:8001::153 |
+    | AAAA | @ | 2606:50c0:8002::153 |
+    | AAAA | @ | 2606:50c0:8003::153 |
+
+1. Wait a couple of hours for DNS propagation to complete, and then try your custom domain to see if it works.

@@ -102,7 +102,7 @@ Many configuration items will depend on your theme. See your theme&rsquo;s READM
   "headline": "How I Built This Blog",
   "description" : "Create a GitHub repository Create a new GitHub repository named \u0026lt;user name\u0026gt;.github.io where \u0026lt;user name\u0026gt; is your GitHub user name. Clone the new repository. Install Hugo NOTE: Since I built this on Fedora 64-bit, so I\u0026rsquo;ll include instructions for that. See Hugo\u0026rsquo;s installation instructions for your operating system.\nDownload a Hugo release for your operating system from Hugo\u0026rsquo;s releases on GitHub. I downloaded hugo_\u0026lt;version\u0026gt;_linux-amd64.tar.gz Extract the Hugo binary: tar -xtvf .\/hugo_\u0026lt;version\u0026gt;_linux-amd64.tar.gz Move the binary to \/usr\/local\/bin: mv .\/hugo \/usr\/local\/bin\/ Make the binary executable: chmod \u002bx \/usr\/local\/bin\/hugo Create a new Hugo site and install a theme In the parent directory containing your \u0026lt;user name\u0026gt;.github.io repository, create a new site: hugo new site \u0026lt;username\u0026gt;.github.com --force NOTE: The --force option is required because a folder named \u0026lt;user name\u0026gt;.github.io already exists. Check out Hugo themes gallery to select a theme you like. I\u0026rsquo;m using the Paper theme. Set your location to your repository directory and add the chosen theme as a submodule in your repository. cd .\/\u0026lt;user name\u0026gt;.github.io git submodule add https:\/\/github.com\/halogenica\/beautifulhugo.git themes\/beautifulhugo Update hugo.toml to include a key for your theme. echo \u0026#34;theme = \u0026#39;beautifulhugo\u0026#39;\u0026#34; \u0026gt;\u0026gt; hugo.toml Start the Hugo server and browse to http:\/\/localhost:1313 to confirm it is working. hugo server Configure your site Many configuration items will depend on your theme. See your theme\u0026rsquo;s README for details. My hugo.toml looks something like this:\n",
   "inLanguage" : "en",
-  "wordCount":  388 ,
+  "wordCount":  480 ,
   "datePublished" : "2026-03-07T00:00:00\u002b00:00",
   "dateModified" : "2026-03-07T00:00:00\u002b00:00",
   "image" : "http:\/\/localhost:1313\/",
@@ -378,6 +378,75 @@ NOTE: Since I …">
 <h2 id="deploy-your-site-with-github-actions">Deploy your site with GitHub Actions</h2>
 <p>See <a href="http://gohugo.io/host-and-deploy/host-on-github-pages/">Host on GitHub Pages</a> for step-by-step instructions on how to setup a GitHub Actions workflow to deploy your site.</p>
 <p>In your <code>hugo.yaml</code> workflow document, customize the <code>jobs/build/env/TZ:</code> key to match your time zone. I set mine to <code>America/New_York</code> for the US Eastern time zone. For a list of valid IANA time zones, see Wikipedia&rsquo;s <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">List of tz database time zones</a>.</p>
+<h2 id="optional-configure-a-custom-domain">(Optional) Configure a custom domain</h2>
+<ol>
+<li>
+<p>Open your repository on github.com.</p>
+</li>
+<li>
+<p>Click <strong>Settings</strong> and then click <strong>Pages</strong>.</p>
+</li>
+<li>
+<p>Under <strong>Custom domain</strong> type your domain name and click <strong>Save</strong>.</p>
+</li>
+<li>
+<p>In your DNS zone host (usually your domain registrar), create DNS A and AAAA records like the following:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Type</th>
+          <th>Name</th>
+          <th>Content</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>A</td>
+          <td>@</td>
+          <td>185.199.108.153</td>
+      </tr>
+      <tr>
+          <td>A</td>
+          <td>@</td>
+          <td>185.199.109.153</td>
+      </tr>
+      <tr>
+          <td>A</td>
+          <td>@</td>
+          <td>185.199.110.153</td>
+      </tr>
+      <tr>
+          <td>A</td>
+          <td>@</td>
+          <td>185.199.111.153</td>
+      </tr>
+      <tr>
+          <td>AAAA</td>
+          <td>@</td>
+          <td>2606:50c0:8000::153</td>
+      </tr>
+      <tr>
+          <td>AAAA</td>
+          <td>@</td>
+          <td>2606:50c0:8001::153</td>
+      </tr>
+      <tr>
+          <td>AAAA</td>
+          <td>@</td>
+          <td>2606:50c0:8002::153</td>
+      </tr>
+      <tr>
+          <td>AAAA</td>
+          <td>@</td>
+          <td>2606:50c0:8003::153</td>
+      </tr>
+  </tbody>
+</table>
+</li>
+<li>
+<p>Wait a couple of hours for DNS propagation to complete, and then try your custom domain to see if it works.</p>
+</li>
+</ol>
 
 
         
